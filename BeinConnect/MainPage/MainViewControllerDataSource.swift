@@ -27,7 +27,7 @@ class SegmentedCollectionViewDataSource: NSObject, UICollectionViewDataSource, U
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! GenreCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "genreCell", for: indexPath) as! GenreCell
         cell.myLabel.text = components[indexPath.row].name
         return cell
     }
@@ -54,7 +54,7 @@ class PageCollectionViewDataSource: NSObject, UICollectionViewDataSource, UIColl
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! PageCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "pageCell", for: indexPath) as! PageCell
         cell.results = components
         cell.handler = handler
         return cell

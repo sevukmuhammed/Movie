@@ -117,13 +117,13 @@ class MainViewController: UIViewController {
     // MARK: - Setup UICollectionViews
     
     private func setupCollectionView() {
-        segmentedCollectionView.register(GenreCell.self, forCellWithReuseIdentifier: "cellId")
+        segmentedCollectionView.register(GenreCell.self, forCellWithReuseIdentifier: "genreCell")
         let segmentedLayout = UICollectionViewFlowLayout()
         segmentedLayout.itemSize = CGSize(width: view.frame.width / 3, height: 35)
         segmentedLayout.scrollDirection = .horizontal
         segmentedCollectionView?.collectionViewLayout = segmentedLayout
 
-        pageCollectionView.register(PageCell.self, forCellWithReuseIdentifier: "cellId")
+        pageCollectionView.register(PageCell.self, forCellWithReuseIdentifier: "pageCell")
         pageCollectionView?.isPagingEnabled = true
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 0
